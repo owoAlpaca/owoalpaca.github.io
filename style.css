@@ -119,6 +119,7 @@ body{
     top: 200px;
     display: none;
     animation: fadeIn 1s forwards;
+    max-width: 600px;
 }
 
 .WeekContentBox.show{
