@@ -1,0 +1,197 @@
+body{
+    margin: 0px;
+    background-color: white;
+    cursor: url(IMG/cursor.png), auto;
+}
+
+.WebHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(51, 51, 51, 1);
+    box-shadow: 0 0 15px black;
+    height: 72px;
+    width: 100%;
+    user-select: none;
+    z-index: 100;
+}
+
+.WebHeader h1{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: .2em;
+    word-spacing: .3em;
+    text-shadow: 0 0.125em 0.375em rgba(0, 0, 0, .50);
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .WebHeader h1{
+        font-size: 1.2rem;
+    }
+}
+
+#Grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto 180px auto;
+
+}
+
+#SectionL{
+    display: flex;
+    justify-content: left;
+}
+
+#SectionR{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#SectionM{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.WeekBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.WeekButton{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.WeekButton:hover{
+    background-color: black;
+    color: White;
+    transform: translate(10px);
+}
+
+.WeekLine{
+    width: 0px;
+    height: 50px;
+    border-left: 2px solid;
+}
+
+#ReturnButton{
+    position: relative;
+    top: -10px;
+    background-color: white;
+    color: black;
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#ReturnButton:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(10px);
+}
+
+.WeekContentBox{
+    position: absolute;
+    top: 200px;
+    display: none;
+    animation: fadeIn 1s forwards;
+}
+
+.WeekContentBox.show{
+    display: block;
+    animation: fadeIn 1s forwards;
+}
+
+
+/* ----- DragBox Begin ----- */
+
+.DragBox01{
+    background: rgba(0, 0, 0, .88);
+    box-shadow: 0 0 15px;
+    position: absolute;
+    top: 72px;
+    border-radius: 10px;
+    z-index: 200;
+}
+.DragBox01 header{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 100;
+    padding: 10px 20px;
+    cursor: default;
+}
+
+.DragBox01 header.active{
+    cursor: move;
+    user-select: none;
+}
+
+@media (max-width: 960px) {
+    .DragBox01{
+        display: none;
+    }
+}
+
+/* ----- DragBox End ----- */
+
+
+/* ----- Keyframes Animation Begin ----- */
+
+@keyframes Drop {
+    from {
+        transform: translateY(-90%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Rise {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-90%);
+    }
+}
+
+.SectionUp{
+    animation: Rise 2s forwards;
+}
+
+.SectionDown{
+    animation: Drop 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ----- Keyframes Animation End ----- */
