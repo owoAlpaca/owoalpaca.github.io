@@ -40,6 +40,12 @@ body{
 
 }
 
+@media (max-width: 960px) {
+    #Grid{
+        grid-template-columns: 1fr;
+    }
+}
+
 #SectionL{
     display: flex;
     justify-content: left;

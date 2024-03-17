@@ -50,11 +50,6 @@ document.querySelectorAll('.WeekButton').forEach(button => {
         document.getElementById('ReturnButton').style.display = 'flex';
         //Display ReturnButton
 
-        document.querySelectorAll('.WeekContentBox').forEach(project => {
-            project.classList.remove('show');
-        });
-        //Hide All WeekContentBox
-
         const targetId = this.getAttribute('data-target');
         const targetProject = document.getElementById(targetId);
         targetProject.classList.add('show');
