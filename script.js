@@ -1,7 +1,7 @@
-const wrapper = document.querySelector(".DragBox01, .DragBox02, .DragBox03"),
+const wrapper = document.querySelector(".DragBox01"),
 header = wrapper.querySelector("header");
 
-let isDragging = false; // Track Drag
+let isDragging = false;
 let initialX, initialY; // Record initial pos of MouseClick
 let initialLeft, initialTop; // Element initial pos
 
