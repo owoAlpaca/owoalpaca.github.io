@@ -21,17 +21,22 @@ document.querySelectorAll('.DragBox01').forEach((wrapper) => {
         initialLeft = parseInt(style.left, 10) || 0;
         initialTop = parseInt(style.top, 10) || 0;
         header.classList.add("active");
+
+        function moveHandler(e) {
+            onDrag(e);
+        }
+    
+        function upHandler() {
+            isDragging = false;
+            header.classList.remove('active');
+            document.removeEventListener('mousemove', moveHandler);
+    
+            document.removeEventListener('mouseup', upHandler);
+        }
+    
+        document.addEventListener('mousemove', moveHandler);
+        document.addEventListener('mouseup', upHandler);
     });
-
-    function moveHandler(e) {
-        onDrag(e);
-    }
-
-    function upHandler() {
-        isDragging = false;
-        header.classList.remove('active');
-    }
-
 });
 
 
