@@ -8,75 +8,74 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="Grid">
-        <div id="SectionL">
-            <div class="WebHeader">
-               <h1>
-                GDES30008 INTERACTIVE MEDIA WORKBOOK
-               </h1> 
+    <div id="DynamicBG">
+        <div id="Grid">
+            <div id="SectionL">
+                <div class="WebHeader">
+                    <h1> GDES30008 INTERACTIVE MEDIA WORKBOOK</h1> 
+                </div>
+                <div class="DragBox01">
+                    <header>Bowei Zhang</header>
+                </div>
+                <div class="DragBox01" style="top: 90%;">
+                    <header>Drag Me!</header>
+                </div>
             </div>
-            <div class="DragBox01">
-                <header>Bowei Zhang</header>
-           </div>
-
-           <div class="DragBox01" style="top: 90%;">
-            <header>Drag Me!</header>
-       </div>
+            <div id="SectionM">
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton" data-target="W1">WEEK 1</button>
+                </div>
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton" data-target="W2">WEEK 2</button>
+                </div>
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton" data-target="W3">WEEK 3</button>
+                </div>
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton">WEEK 4</button>
+                </div>
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton">WEEK 5</button>
+                </div>
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton">WEEK 6</button>
+                </div>
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton">WEEK 7</button>
+                </div>
+                <div class="WeekLine"></div>
+                <div class="WeekBox">
+                    <button class="WeekButton">WEEK 8</button>
+                </div>
+                <div class="WeekLine"></div>
+                <button id="ReturnButton" style="display: none;">BACK</button>
+            </div>
+            <div id="SectionR">
+                <div id="W1" class="WeekContentBox">
+                    <img src="IMG/Week1_HELLOWORLD.jpg" alt="Week1 HelloWorld Activity" class="ResponsiveIMG">
+                    <p>Week1 Hello World Activity</p>
+                </div>
+                <div id="W2" class="WeekContentBox">
+                    <img src="IMG/Week2_CRAZY8.jpg" alt="Week2 Crazy8 Activity" class="ResponsiveIMG">
+                    <p>Week2 Paper Prototyping Crazy8</p>
+                    <img src="IMG/Week2_MAKE_IT_BLING.jpg" alt="Week2 Make It Bling Activity" class="ResponsiveIMG">
+                    <p>Week2 Make It Bling</p>
+                </div>
+                <div id="W3" class="WeekContentBox">
+                    <img src="IMG/Week3_FLUID_DESIGN.jpg" alt="Week3 Fluid Design" class="ResponsiveIMG">
+                    <p>Week3 Fluid Design</p>
+                </div>
+            </div>
         </div>
-        <div id="SectionM">
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton" data-target="W1">WEEK 1</button>
-            </div>
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton" data-target="W2">WEEK 2</button>
-            </div>
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton" data-target="W3">WEEK 3</button>
-            </div>
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton">WEEK 4</button>
-            </div>
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton">WEEK 5</button>
-            </div>
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton">WEEK 6</button>
-            </div>
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton">WEEK 7</button>
-            </div>
-            <div class="WeekLine"></div>
-            <div class="WeekBox">
-                <button class="WeekButton">WEEK 8</button>
-            </div>
-            <div class="WeekLine"></div>
-            <button id="ReturnButton" style="display: none;">BACK</button>
-        </div>
-        <div id="SectionR">
-            <div id="W1" class="WeekContentBox">
-                <img src="IMG/Week1_HELLOWORLD.jpg" alt="Week1 HelloWorld Activity" class="ResponsiveIMG">
-                <p>Week1 Hello World Activity</p>
-            </div>
-            <div id="W2" class="WeekContentBox">
-                <img src="IMG/Week2_CRAZY8.jpg" alt="Week2 Crazy8 Activity" class="ResponsiveIMG">
-                <p>Week2 Paper Prototyping Crazy8</p>
-                <img src="IMG/Week2_MAKE_IT_BLING.jpg" alt="Week2 Make It Bling Activity" class="ResponsiveIMG">
-                <p>Week2 Make It Bling</p>
-            </div>
-            <div id="W3" class="WeekContentBox">
-                <img src="IMG/Week3_FLUID_DESIGN.jpg" alt="Week3 Fluid Design" class="ResponsiveIMG">
-                <p>Week3 Fluid Design</p>
-            </div>
-        </div>
+        
+        <script src="script.js"></script>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
