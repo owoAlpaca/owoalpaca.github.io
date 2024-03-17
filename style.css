@@ -120,12 +120,18 @@ body{
     transform: translateY(10px);
 }
 
+@media (max-width: 960px) {
+    #ReturnButton{
+        font-size: 20px;
+    }
+}
+
 .WeekContentBox{
     position: absolute;
-    top: 100px;
+    top: 160px;
     display: none;
     animation: fadeIn 1s forwards;
-    max-width: 300px;
+    max-width: 400px; /* Control IMG Size */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -137,7 +143,7 @@ body{
 }
 
 .WeekContentBox p{
-    font-size: 16px;
+    font-size: 16px; /* Control Font Size */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
     
@@ -148,19 +154,20 @@ body{
     height: auto;
     display: block;
     padding: 5px;
-    margin: auto;
+    margin: 40px 0px 0px 0px;
     box-shadow: 0 0 15px black;
+    z-index: 300;
 }
 
 @media (max-width: 960px){
     .WeekContentBox{
-        max-width: 120px;
+        max-width: 240px;
     }
 }
 
 @media (max-width: 960px){
     .WeekContentBox p{
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -229,6 +236,11 @@ body{
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 /* ----- Keyframes Animation End ----- */
