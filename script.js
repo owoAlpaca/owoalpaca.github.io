@@ -1,37 +1,39 @@
-const wrapper = document.querySelector(".DragBox01"),
-header = wrapper.querySelector("header");
+document.querySelectorAll('.DragBox01').forEach((wrapper) => {
+    const header = wrapper.querySelector("header");
 
-let isDragging = false;
-let initialX, initialY; // Record initial pos of MouseClick
-let initialLeft, initialTop; // Element initial pos
+    let isDragging = false;
+    let initialX, initialY; // Record initial pos of MouseClick
+    let initialLeft, initialTop; // Element initial pos
 
-function onDrag(e){
-    if (!isDragging) return;
-    const dx = e.clientX - initialX;
-    const dy = e.clientY - initialY;
-    wrapper.style.left = `${initialLeft + dx}px`;
-    wrapper.style.top = `${initialTop + dy}px`;
-}
+    function onDrag(e){
+        if (!isDragging) return;
+        const dx = e.clientX - initialX;
+        const dy = e.clientY - initialY;
+        wrapper.style.left = `${initialLeft + dx}px`;
+        wrapper.style.top = `${initialTop + dy}px`;
+    }
 
-document.addEventListener("mouseup", ()=>{
-    isDragging = false;
-    header.classList.remove("active");
+    header.addEventListener("mousedown", (e)=>{
+        isDragging = true;
+        initialX = e.clientX;
+        initialY = e.clientY;
+        let style = window.getComputedStyle(wrapper);
+        initialLeft = parseInt(style.left, 10) || 0;
+        initialTop = parseInt(style.top, 10) || 0;
+        header.classList.add("active");
+    });
+
+    function moveHandler(e) {
+        onDrag(e);
+    }
+
+    function upHandler() {
+        isDragging = false;
+        header.classList.remove('active');
+    }
+
 });
 
-header.addEventListener("mousedown", (e)=>{
-    isDragging = true;
-    initialX = e.clientX;
-    initialY = e.clientY;
-    let style = window.getComputedStyle(wrapper);
-    initialLeft = parseInt(style.left, 10);
-    initialTop = parseInt(style.top, 10);
-    header.classList.add("active");
-    document.addEventListener("mousemove", onDrag);
-});
-
-document.addEventListener("mouseup", ()=>{
-    document.removeEventListener("mousemove", onDrag);
-});
 
 //--------------------------------------------------------//
 
