@@ -2,6 +2,7 @@ body{
     margin: 0px;
     background-color: white;
     cursor: url(IMG/cursor.png), default;
+    user-select: none;
 }
 
 #DynamicBG{
@@ -14,7 +15,7 @@ body{
     background-size: 400% 400%;
     min-height: 100vh;
     z-index: 1;
-    animation: bg-animation 10s infinite alternate;
+    animation: bg-animation 5s infinite alternate;
 }
 
 @keyframes bg-animation {
@@ -26,6 +27,34 @@ body{
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+.Plane{
+    position: fixed;
+    z-index: 2;
+    animation: take-off 10s infinite;
+    font-size: 50px;
+    left: -30px;
+    bottom: 0px;
+    opacity: .25;
+    user-select: none;
+}
+
+@keyframes take-off {
+    0% {
+        transform: translate(0,0);
+        animation-timing-function: ease-in;
+    }
+    40% {
+        transform: translate(40vw,0vh);
+        rotate: 0deg;
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate(110vw,-110vh);
+        rotate: -15deg;
+        animation-timing-function: ease-out;
     }
 }
 
@@ -104,7 +133,7 @@ body{
     font-weight: bold;
     letter-spacing: 0.1em;
     word-spacing: 0.1em;
-    cursor: pointer;
+    cursor: url(IMG/cursorpointer.png), pointer;
     transition: all 0.3s ease;
 }
 
@@ -216,12 +245,11 @@ body{
     font-size: 2vw;
     font-weight: 100;
     padding: 10px 20px;
-    cursor: auto;
     user-select: none;
 }
 
 .DragBox01 header.active{
-    cursor: move;
+    cursor: url(IMG/cursormove.png), move;
     user-select: none;
 }
 
